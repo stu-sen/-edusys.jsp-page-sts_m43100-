@@ -1,0 +1,234 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scaletarget-densitydpi=medium-dpi" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<title>나이스 학생서비스</title>
+		<link rel="stylesheet" type="text/css" href="/ws/css/import.css" />
+		<script type="text/javascript" src="/netfunnel/js/netfunnel.js" charset="UTF-8" ></script>
+		<script type="text/javascript" src="/websquare/javascript.wq?q=/bootloader"></script>
+
+		<!-- 베라포트: 공통 -->
+		<script type="text/javascript">//_SITE_SystemLang="ENG";</script>
+		<script type="text/javascript">_SITE_CreateObject=false;</script>
+		<!-- script type="text/javascript" src="../jquery/json_parse.js?20120620"></script -->
+		<script type="text/javascript" src="/plugincheck/veraport/veraport20.js?20140228"></script>               <!-- 베라포트공통JS -->
+		<!-- 베라포트: 통합설치용 -->
+		<script type="text/javascript" src="/plugincheck/veraport/install20/install_internal.js?20140812"></script>            <!-- 통합설치공통JS -->
+		<script type="text/javascript" src="/plugincheck/veraport/install20/install_config.js?20140812"></script>              <!-- 통합설치설정JS -->
+		<!-- [필수]베라포트: 설치 확인 및 모듈 로딩/START-->
+		<script type="text/javascript"></script>
+		<!-- [필수]베라포트: 설치 확인 및 모듈 로딩/END -->
+
+
+		<script type="text/javascript">
+
+			// 로그인 타임 저장
+			var COM_SYS_INFO_LOGIN_TIME = "";
+			var _edusys_no_data_ = "Q4M7S5L0B6F6O7X1E5Q7G2WFS7G2S5U3D7P0X3D3Z3C1C3H7U6F4G7H7N7Z0R7PAM7N4R4LDA4C8J4B6O5S1Z7I7A3ODY3ODzSREGeXpPjZW0ZwsbO%2FGQLFyz8nwoEmiZMptUa0uIpJcM%2BnA2vrXecizE9Ohs8fvVpqhFJvI1RFR0bWXxOWsLmgyqJQaYB3bipFE1kuR45V83P0ExXaJmddQMbSEWSAZ%2F08Rskkn3BWUJXveXMAa0SujNsY2EZRZp1ISFRVbYPYg7gOiRwCnUiKckq1HhdBgmOC%2FMmgCSlRHVJyYrNLd%2FvGXNDYgOsYbamZK6fPw0VKpbSw3%2BPps5%2BGI5UCs%2Bffv0sUKuLpKvk159IprUdzoA%2F7ehCYeBZRwnSfHjDj3Lc6%2BpGESZfZ%2B8eZEmg1YWXzt6iuUs6Mu3nd9H8llWLg%2Fr8ssBXaoswpCF2ePAveTYmIDKvWSQZ5%2FDK6MzHVMUU9ocyFRYiz5hm6M6FZ9HDbfsX3OlgsZSfQm3en289qdFDOD5Gj590rXiSVxNjjOox0L60";
+
+			//==================================================================
+			// 모든 도메인 정보를 가져온다.
+			//==================================================================
+			function gfn_getAllDomainInfo() {
+			    var domainInfo = [];
+              domainInfo['P10_SQA'] = "kged.jbe.go.kr";
+              domainInfo['T10_SQA'] = "kged.jje.go.kr";
+              domainInfo['C10_HES'] = "hdu.pen.go.kr";
+              domainInfo['G10_HES'] = "hdu.dje.go.kr";
+              domainInfo['K10_HES'] = "hdu.kwe.go.kr";
+              domainInfo['E10_PAS'] = "homedu.ice.go.kr";
+              domainInfo['E10_SCS'] = "hakwon.ice.go.kr";
+              domainInfo['S10_HES'] = "hdu.gne.go.kr";
+              domainInfo['I10_PAS'] = "homedu.sje.go.kr";
+              domainInfo['I10_SCS'] = "hakwon.sje.go.kr";
+              domainInfo['M10_PAS'] = "homedu.cbe.go.kr";
+              domainInfo['M10_SCS'] = "hakwon.cbe.go.kr";
+              domainInfo['Q10_PAS'] = "homedu.jne.go.kr";
+              domainInfo['Q10_SCS'] = "hakwon.jne.go.kr";
+              domainInfo['C10_STS'] = "stu.pen.go.kr";
+              domainInfo['C10_EDR'] = "eduro.pen.go.kr";
+              domainInfo['C10_SPR'] = "par.pen.go.kr";
+              domainInfo['G10_STS'] = "stu.dje.go.kr";
+              domainInfo['G10_EDR'] = "eduro.dje.go.kr";
+              domainInfo['G10_SPR'] = "par.dje.go.kr";
+              domainInfo['K10_STS'] = "stu.kwe.go.kr";
+              domainInfo['K10_EDR'] = "eduro.kwe.go.kr";
+              domainInfo['K10_SPR'] = "par.kwe.go.kr";
+              domainInfo['D10_CSO'] = "edurecruit.dge.go.kr";
+              domainInfo['S10_STS'] = "stu.gne.go.kr";
+              domainInfo['C10_SQA'] = "kged.pen.go.kr";
+              domainInfo['S10_EDR'] = "eduro.gne.go.kr";
+              domainInfo['H10_CSO'] = "edurecruit.use.go.kr";
+              domainInfo['S10_SPR'] = "par.gne.go.kr";
+              domainInfo['G10_SQA'] = "kged.dje.go.kr";
+              domainInfo['K10_SQA'] = "kged.kwe.go.kr";
+              domainInfo['P10_CSO'] = "edurecruit.jbe.go.kr";
+              domainInfo['T10_CSO'] = "edurecruit.jje.go.kr";
+              domainInfo['S10_SQA'] = "kged.gne.go.kr";
+              domainInfo['B10_HES'] = "hdu.sen.go.kr";
+              domainInfo['F10_HES'] = "hdu.gen.go.kr";
+              domainInfo['J10_HES'] = "hdu.goe.go.kr";
+              domainInfo['N10_HES'] = "hdu.cne.go.kr";
+              domainInfo['D10_PAS'] = "homedu.dge.go.kr";
+              domainInfo['D10_SCS'] = "hakwon.dge.go.kr";
+              domainInfo['R10_HES'] = "hdu.gbe.kr";
+              domainInfo['H10_PAS'] = "homedu.use.go.kr";
+              domainInfo['H10_SCS'] = "hakwon.use.go.kr";
+              domainInfo['P10_PAS'] = "homedu.jbe.go.kr";
+              domainInfo['P10_SCS'] = "hakwon.jbe.go.kr";
+              domainInfo['B10_STS'] = "stu.sen.go.kr";
+              domainInfo['B10_EDR'] = "eduro.sen.go.kr";
+              domainInfo['T10_PAS'] = "homedu.jje.go.kr";
+              domainInfo['T10_SCS'] = "hakwon.jje.go.kr";
+              domainInfo['B10_SPR'] = "par.sen.go.kr";
+              domainInfo['F10_STS'] = "stu.gen.go.kr";
+              domainInfo['F10_EDR'] = "eduro.gen.go.kr";
+              domainInfo['F10_SPR'] = "par.gen.go.kr";
+              domainInfo['J10_STS'] = "stu.goe.go.kr";
+              domainInfo['J10_EDR'] = "eduro.goe.go.kr";
+              domainInfo['J10_SPR'] = "par.goe.go.kr";
+              domainInfo['N10_STS'] = "stu.cne.go.kr";
+              domainInfo['N10_EDR'] = "eduro.cne.go.kr";
+              domainInfo['C10_CSO'] = "edurecruit.pen.go.kr";
+              domainInfo['N10_SPR'] = "par.cne.go.kr";
+              domainInfo['R10_STS'] = "stu.gbe.kr";
+              domainInfo['R10_EDR'] = "eduro.gbe.kr";
+              domainInfo['B10_SQA'] = "kged.sen.go.kr";
+              domainInfo['G10_CSO'] = "edurecruit.dje.go.kr";
+              domainInfo['R10_SPR'] = "par.gbe.kr";
+              domainInfo['F10_SQA'] = "kged.gen.go.kr";
+              domainInfo['K10_CSO'] = "edurecruit.kwe.go.kr";
+              domainInfo['J10_SQA'] = "kged.goe.go.kr";
+              domainInfo['N10_SQA'] = "kged.cne.go.kr";
+              domainInfo['S10_CSO'] = "edurecruit.gne.go.kr";
+              domainInfo['R10_SQA'] = "kged.gbe.kr";
+              domainInfo['E10_HES'] = "hdu.ice.go.kr";
+              domainInfo['I10_HES'] = "hdu.sje.go.kr";
+              domainInfo['M10_HES'] = "hdu.cbe.go.kr";
+              domainInfo['C10_PAS'] = "homedu.pen.go.kr";
+              domainInfo['C10_SCS'] = "hakwon.pen.go.kr";
+              domainInfo['Q10_HES'] = "hdu.jne.go.kr";
+              domainInfo['G10_PAS'] = "homedu.dje.go.kr";
+              domainInfo['G10_SCS'] = "hakwon.dje.go.kr";
+              domainInfo['K10_PAS'] = "homedu.kwe.go.kr";
+              domainInfo['K10_SCS'] = "hakwon.kwe.go.kr";
+              domainInfo['S10_PAS'] = "homedu.gne.go.kr";
+              domainInfo['S10_SCS'] = "hakwon.gne.go.kr";
+              domainInfo['E10_STS'] = "stu.ice.go.kr";
+              domainInfo['E10_EDR'] = "eduro.ice.go.kr";
+              domainInfo['E10_SPR'] = "par.ice.go.kr";
+              domainInfo['I10_STS'] = "stu.sje.go.kr";
+              domainInfo['I10_EDR'] = "eduro.sje.go.kr";
+              domainInfo['I10_SPR'] = "par.sje.go.kr";
+              domainInfo['M10_STS'] = "stu.cbe.go.kr";
+              domainInfo['M10_EDR'] = "eduro.cbe.go.kr";
+              domainInfo['B10_CSO'] = "edurecruit.sen.go.kr";
+              domainInfo['M10_SPR'] = "par.cbe.go.kr";
+              domainInfo['Q10_STS'] = "stu.jne.go.kr";
+              domainInfo['Q10_EDR'] = "eduro.jne.go.kr";
+              domainInfo['F10_CSO'] = "edurecruit.gen.go.kr";
+              domainInfo['Q10_SPR'] = "par.jne.go.kr";
+              domainInfo['E10_SQA'] = "kged.ice.go.kr";
+              domainInfo['J10_CSO'] = "edurecruit.goe.go.kr";
+              domainInfo['I10_SQA'] = "kged.sje.go.kr";
+              domainInfo['N10_CSO'] = "edurecruit.cne.go.kr";
+              domainInfo['M10_SQA'] = "kged.cbe.go.kr";
+              domainInfo['R10_CSO'] = "edurecruit.gbe.kr";
+              domainInfo['Q10_SQA'] = "kged.jne.go.kr";
+              domainInfo['D10_HES'] = "hdu.dge.go.kr";
+              domainInfo['H10_HES'] = "hdu.use.go.kr";
+              domainInfo['B10_PAS'] = "homedu.sen.go.kr";
+              domainInfo['B10_SCS'] = "hakwon.sen.go.kr";
+              domainInfo['P10_HES'] = "hdu.jbe.go.kr";
+              domainInfo['F10_PAS'] = "homedu.gen.go.kr";
+              domainInfo['F10_SCS'] = "hakwon.gen.go.kr";
+              domainInfo['T10_HES'] = "hdu.jje.go.kr";
+              domainInfo['J10_PAS'] = "homedu.goe.go.kr";
+              domainInfo['J10_SCS'] = "hakwon.goe.go.kr";
+              domainInfo['N10_PAS'] = "homedu.cne.go.kr";
+              domainInfo['N10_SCS'] = "hakwon.cne.go.kr";
+              domainInfo['R10_PAS'] = "homedu.gbe.kr";
+              domainInfo['R10_SCS'] = "hakwon.gbe.kr";
+              domainInfo['D10_STS'] = "stu.dge.go.kr";
+              domainInfo['D10_EDR'] = "eduro.dge.go.kr";
+              domainInfo['D10_SPR'] = "par.dge.go.kr";
+              domainInfo['H10_STS'] = "stu.use.go.kr";
+              domainInfo['H10_EDR'] = "eduro.use.go.kr";
+              domainInfo['H10_SPR'] = "par.use.go.kr";
+              domainInfo['P10_STS'] = "stu.jbe.go.kr";
+              domainInfo['P10_EDR'] = "eduro.jbe.go.kr";
+              domainInfo['E10_CSO'] = "edurecruit.ice.go.kr";
+              domainInfo['A00_PAS'] = "www.neis.go.kr";
+              domainInfo['P10_SPR'] = "par.jbe.go.kr";
+              domainInfo['T10_STS'] = "stu.jje.go.kr";
+              domainInfo['T10_EDR'] = "eduro.jje.go.kr";
+              domainInfo['D10_SQA'] = "kged.dge.go.kr";
+              domainInfo['I10_CSO'] = "edurecruit.sje.go.kr";
+              domainInfo['T10_SPR'] = "par.jje.go.kr";
+              domainInfo['H10_SQA'] = "kged.use.go.kr";
+              domainInfo['M10_CSO'] = "edurecruit.cbe.go.kr";
+              domainInfo['Q10_CSO'] = "edurecruit.jne.go.kr";
+ 			    return domainInfo;
+			}
+
+			//==================================================================
+			// 화면 전달용 파라메터를 취득한다.
+			//==================================================================
+			function gfn_getScreenParam()	{
+				return JSON.parse(decodeURIComponent("{}"));
+			}
+
+			//==================================================================
+			// 오픈하려는 화면의 패스를 취득한다.
+			//==================================================================
+			function gfn_getLayerScreenPath()	{
+				return "/ws/edusys/pa/com/pa_sts_mcontents.xml";
+			}
+
+			//==================================================================
+			// 오픈하려는 화면의 메뉴ID를 취득한다.
+			//==================================================================
+			function gfn_getScreenMenuId() {
+				return ""
+			}
+
+			//==================================================================
+			// 초기화 한다.
+			//==================================================================
+			function gfn_websquareInit() {
+				try {
+					WebSquare.startApplication("/ws/edusys/pa/com/pa_com_layer01.xml");
+				} catch(e) {
+					alert(e.message);
+				}
+			}
+
+			// 로드 이벤트
+			$(window).load(gfn_websquareInit);
+		</script>
+	</head>
+<body>
+</body>
+</html>
